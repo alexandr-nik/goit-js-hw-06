@@ -5,7 +5,7 @@ const input = document.querySelector("#controls input");
 const createEl = document.querySelector("button[data-create]");
 const destroyEl = document.querySelector("button[data-destroy]");
 const divBoxes = document.querySelector("#boxes");
-const inputDivEl = document.createElement("div")
+const inputDivEl = document.createElement("div");
 inputDivEl.style.display = "Flex";
 inputDivEl.style.justifyContent = "center";
 inputDivEl.style.alignItems = "center";
@@ -32,13 +32,13 @@ function createBoxes() {
     inputDiv.style.width = `${divWidth}px`;
     console.log(inputDiv.style.width);
     inputDiv.style.height = `${divHeight}px`;
-    inputDiv.style.border = "1px solid black"
+    inputDiv.style.border = "1px solid black";
     inputDiv.style.backgroundColor = getRandomHexColor();
     inputDivEl.append(inputDiv);
     divHeight += 10;
     divWidth += 10;
   }
-  divBoxes.appendChild(inputDivEl)
+  divBoxes.appendChild(inputDivEl);
 }
 
 function destroyBoxes() {

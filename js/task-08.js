@@ -5,10 +5,10 @@ const loginForm = {};
 loginFormEl.addEventListener("submit", (event) => {
   event.preventDefault();
   const {
-    elements: { email, password }
+    elements: { email, password },
   } = event.currentTarget;
-  if (email.value === '' || password.value === "") {
-    alert("All fields must be filled!")
+  if (email.value === "" || password.value === "") {
+    alert("All fields must be filled!");
   } else {
     loginForm.email = email.value;
     loginForm.password = password.value;
