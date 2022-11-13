@@ -8,5 +8,5 @@ validationInputEl.addEventListener("input", (event) => {
 });
 
 validationInputEl.addEventListener("blur", () => {
- validationInputCurrent >= validationInput ? validationInputEl.className = "valid":  validationInputEl.className = "invalid";
+ validationInputCurrent == validationInput ? validationInputEl.className = "valid":  validationInputEl.className = "invalid";
   });

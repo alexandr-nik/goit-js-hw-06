@@ -5,11 +5,11 @@ const input = document.querySelector("#controls input");
 const createEl = document.querySelector("button[data-create]");
 const destroyEl = document.querySelector("button[data-destroy]");
 const divBoxes = document.querySelector("#boxes");
-
-divBoxes.style.display = "Flex";
-divBoxes.style.justifyContent = "center";
-divBoxes.style.alignItems = "center";
-divBoxes.style.gap = "10px";
+const inputDivEl = document.createElement("div")
+inputDivEl.style.display = "Flex";
+inputDivEl.style.justifyContent = "center";
+inputDivEl.style.alignItems = "center";
+inputDivEl.style.gap = "10px";
 let amount = 0;
 
 input.addEventListener("input", (event) => {
@@ -32,13 +32,16 @@ function createBoxes() {
     inputDiv.style.width = `${divWidth}px`;
     console.log(inputDiv.style.width);
     inputDiv.style.height = `${divHeight}px`;
+    inputDiv.style.border = "1px solid black"
     inputDiv.style.backgroundColor = getRandomHexColor();
-    divBoxes.appendChild(inputDiv);
+    inputDivEl.append(inputDiv);
     divHeight += 10;
     divWidth += 10;
   }
+  divBoxes.appendChild(inputDivEl)
 }
 
 function destroyBoxes() {
   divBoxes.innerHTML = "";
+  inputDivEl.innerHTML = "";
 }
